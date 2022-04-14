@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>To-Do Flask</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='index.css') }}">
+</head>
+<body>
+    <header>
+
+    </header>
+
+    <main>
+        <form class="todo-form"action="/add" method="post">
+            <label for="ftitle">Descrição do To-Do</label>
+            <input class="form-control" type="text" id="ftitle" name="ftitle">
+            <br>
+            <button type="submit">Adicionar</button>
+        </form>
+
+        
+            {% for todo in todo_list %}
+                <div class="todo-item">
+                    <span>{{ todo.id }} | {{ todo.title }}</span>
+                    <br>
+                    <div>
+                        {% if todo.completed == True%}
+                            <a class="completed" href="/update/{{ todo.id }}">Completado</a>
+                        {% else %}
+                            <a class="not-completed" href="/update/{{ todo.id }}">Não Completado</a>
+                        {% endif %}
+                    
+                        <a href="/delete/{{ todo.id }}">Deletar</a>
+                    </div>
+                    <br>
+                </div>
+            {% endfor %}
+        
+    </main>
+
+    <footer>
+
+    </footer>
+    
+</body>
+</html>
