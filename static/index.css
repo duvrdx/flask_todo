@@ -98,7 +98,7 @@ a{
     color: rgb(255, 58, 58)
 }
 
-.stats{
+.todo-stats{
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -108,7 +108,7 @@ a{
     font-size: 1rem;
     color: #FFF;
     padding: .5rem 1rem;
-    margin-bottom: 0.5rem;
+    margin: 0.5rem;
     width: 20rem;
     height: 1rem;
     font-size: .8rem;
@@ -127,14 +127,14 @@ a{
     flex-direction: column;
     font-family: sans-serif;
     font-size: .8rem;
-    color: #FFF;
+    color: #000;
     padding: .5rem;
     margin: 0.5rem;
     width: 80%;
     height: fit-content;
     font-size: .8rem;
-    font-weight: bold;
-    background-color: #737373;
+    font-weight: 300;
+    background-color: #ece8e8;
     border-radius: 1rem;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
     box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
