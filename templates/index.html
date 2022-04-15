@@ -10,6 +10,30 @@
     </header>
 
     <main>
+
+        <div class="background">
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+            <span></span>
+         </div>
+         
         <form class="todo-form"action="/add" method="post">
             <label for="ftitle">Descrição do To-Do</label>
             <input class="form-control" type="text" id="ftitle" name="ftitle">
@@ -19,7 +43,7 @@
             
             {% if todo_completed > 0 or todo_incompleted > 0 %}
                 <div class="description">
-                    <span>Á fazer: {{ todo_incompleted }} | Feitos: {{ todo_completed }}</span>
+                    <span>A fazer: {{ todo_incompleted }} | Feitos: {{ todo_completed }}</span>
                 </div>
             {% endif %}
 
@@ -29,12 +53,12 @@
                     <br>
                     <div>
                         {% if todo.completed == True%}
-                            <a class="completed" href="/update/{{ todo.id }}">Completado</a>
+                            <a class="completed" href="/update/{{ todo.id }}">Feito</a>
                         {% else %}
-                            <a class="not-completed" href="/update/{{ todo.id }}">Não Completado</a>
+                            <a class="not-completed" href="/update/{{ todo.id }}">A fazer</a>
                         {% endif %}
                     
-                        <span> | </span><a href="/delete/{{ todo.id }}">Deletar</a>
+                        <span class="del"> | </span><a href="/delete/{{ todo.id }}">Deletar</a>
                     </div>
                     <br>
                 </div>
