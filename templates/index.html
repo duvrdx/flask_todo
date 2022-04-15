@@ -35,14 +35,15 @@
          </div>
          
         <form class="todo-form"action="/add" method="post">
-            <label for="ftitle">Descrição do To-Do</label>
+            <label for="ftitle">Título</label>
             <input class="form-control" type="text" id="ftitle" name="ftitle">
-            <br>
+            <label for="fdescription">Descrição</label>
+            <input class="form-control" type="text" id="fdescription" name="fdescription">
             <button type="submit">Adicionar</button>
         </form>
             
             {% if todo_completed > 0 or todo_incompleted > 0 %}
-                <div class="description">
+                <div class="todo-stats">
                     <span>A fazer: {{ todo_incompleted }} | Feitos: {{ todo_completed }}</span>
                 </div>
             {% endif %}
@@ -51,6 +52,15 @@
                 <div class="todo-item">
                     <span>{{ todo.id }} | {{ todo.title }}</span>
                     <br>
+                    {% if not(todo.description != "") or not(todo.description != " ")%}
+                        <div class="description" style="display: none;">
+                            <p>{{todo.description}}</p>
+                        </div>
+                    {%else%}
+                        <div class="description">
+                            <p>{{todo.description}}</p>
+                        </div>
+                    {% endif %}
                     <div>
                         {% if todo.completed == True%}
                             <a class="completed" href="/update/{{ todo.id }}">Feito</a>

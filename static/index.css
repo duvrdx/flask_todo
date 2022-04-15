@@ -3,7 +3,7 @@
     padding: 0;
 }
 
-main{padding: 5rem;
+main{padding: 1rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -17,9 +17,8 @@ main{padding: 5rem;
     align-items: center;
     flex-direction: column;
     padding: 1rem;
-    margin: 1rem;
     width: 20rem;
-    height: 10rem;
+    height: 15rem;
     background-color: #0D0D0D;
     border-radius: 1rem;
     -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
@@ -43,8 +42,9 @@ main{padding: 5rem;
 .todo-form label{
     font-family: sans-serif;
     font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 1rem;
     color: #FFF;
+    margin-bottom: .5rem;
 }
 
 .todo-form button{
@@ -66,7 +66,7 @@ main{padding: 5rem;
     padding: 1rem;
     margin: 0.3rem;
     width: 20rem;
-    height: 3rem;
+    height: fit-content;
     font-weight: bold;
     background-color: #404040;
     border-radius: 1rem;
@@ -98,7 +98,7 @@ a{
     color: rgb(255, 58, 58)
 }
 
-.description{
+.stats{
     z-index: 2;
     display: flex;
     justify-content: center;
@@ -111,6 +111,27 @@ a{
     margin-bottom: 0.5rem;
     width: 20rem;
     height: 1rem;
+    font-size: .8rem;
+    font-weight: bold;
+    background-color: #737373;
+    border-radius: 1rem;
+    -webkit-box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2); 
+    box-shadow: 5px 5px 15px 5px rgba(0,0,0,0.2);
+}
+
+.description{
+    z-index: 2;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-family: sans-serif;
+    font-size: .8rem;
+    color: #FFF;
+    padding: .5rem;
+    margin: 0.5rem;
+    width: 80%;
+    height: fit-content;
     font-size: .8rem;
     font-weight: bold;
     background-color: #737373;
