@@ -16,8 +16,13 @@
             <br>
             <button type="submit">Adicionar</button>
         </form>
+            
+            {% if todo_completed > 0 or todo_incompleted > 0 %}
+                <div class="description">
+                    <span>Á fazer: {{ todo_incompleted }} | Feitos: {{ todo_completed }}</span>
+                </div>
+            {% endif %}
 
-        
             {% for todo in todo_list %}
                 <div class="todo-item">
                     <span>{{ todo.id }} | {{ todo.title }}</span>
@@ -29,7 +34,7 @@
                             <a class="not-completed" href="/update/{{ todo.id }}">Não Completado</a>
                         {% endif %}
                     
-                        <a href="/delete/{{ todo.id }}">Deletar</a>
+                        <span> | </span><a href="/delete/{{ todo.id }}">Deletar</a>
                     </div>
                     <br>
                 </div>
